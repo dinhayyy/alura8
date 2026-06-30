@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner Anti-Golpes | Central de Segurança</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="security-container">
+        <header class="security-header">
+            <div class="shield-icon">🛡️</div>
+            <h1>Analisador de Mensagens Suspeitas</h1>
+            <p>Cole a mensagem recebida (SMS, WhatsApp ou E-mail) para auditar possíveis riscos de fraude ou engenharia social.</p>
+        </header>
+
+        <main class="analysis-box">
+            <textarea id="input-mensagem" placeholder="Cole o texto da mensagem com o link aqui para analisar... Ex: 'Seu banco informa: Conta bloqueada! Regularize agora no link: http://banco-seguro-atualiza.com'"></textarea>
+            <button id="btn-analisar" class="btn-scan">Escanear String de Texto</button>
+            
+            <div id="resultado-analise" class="result-panel invisible">
+                </div>
+        </main>
+
+        <hr class="section-divider">
+
+        <section class="guidelines-section">
+            <h2>Guia Técnico: Como Identificar Sinais de Golpe</h2>
+            <p>Abaixo estão listados os dois principais indicadores de risco baseados em padrões de ataques cibernéticos globais:</p>
+
+            <div class="alerts-grid">
+                <div class="alert-card">
+                    <div class="alert-badge">Alerta 01</div>
+                    <h3>Domínios Falsos ou Desconhecidos (Links Camuflados)</h3>
+                    <p>Golpistas criam URLs que tentam imitar empresas reais (ex: <code>suaconta-banco.com</code> em vez de <code>banco.com.br</code>). O uso de protocolos inseguros (<code>http://</code>) ou extensões incomuns também é um forte sinal de engenharia social.</p>
+                </div>
+
+                <div class="alert-card">
+                    <div class="alert-badge">Alerta 02</div>
+                    <h3>Urgência Artificial e Coação Emocional</h3>
+                    <p>Mensagens que exigem ação imediata sob ameaça de punição ("Sua conta será cancelada em 2 horas", "Multa gerada", "Seu CPF está irregular") tentam desativar o senso crítico da vítima para que ela clique no link sem checar a fonte.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
